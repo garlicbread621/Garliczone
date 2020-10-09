@@ -1,0 +1,17 @@
+years = int(input("How many years will you be tracking?: "))
+year = ["January, Febuary, March, April, May, June, July, August, September, October, November, December"]
+totalrainfall = 0
+yearlyaverage = 0
+monthlyaverage = 0
+for currentyear in range(1, years+1):
+  print("It is the beginning of year",currentyear+".")
+  print("Total Rainfall:",totalrainfall)
+  print("Monthly average rainfall:",monthlyaverage)
+  print("Yearly average rainfall:",yearlyaverage)
+  
+  for month in year:
+   rainfall = float(input("How many inches of rainfall were in", month + "?: "))
+   totalrainfall += rainfall
+   monthlyaverage = totalrainfall/(currentyear*12)
+   yearlyaverage = totalrainfall/currentyear
+
